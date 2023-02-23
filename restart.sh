@@ -1,1 +1,3 @@
-docker-compose restart
+./down.sh
+./up.sh
+

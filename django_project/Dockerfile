@@ -21,7 +21,4 @@ RUN pip install -r dev_requirements.txt
 RUN mkdir static media
 RUN python manage.py collectstatic
 
-# gunicorn
-RUN pip install gunicorn
-
 CMD ["./entrypoint.sh"]
