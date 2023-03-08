@@ -1,3 +1,4 @@
 #!/bin/bash
 
-gunicorn --workers 1 --bind 0.0.0.0:8000 main.wsgi
+# num cores = 2 -> workers = 2 * 2 + 1 = 5
+gunicorn --workers 5 --bind 0.0.0.0:8000 main.wsgi
