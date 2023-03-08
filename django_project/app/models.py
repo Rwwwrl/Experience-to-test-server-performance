@@ -9,4 +9,4 @@ class Author(models.Model):
 class Book(models.Model):
 
     author = models.ForeignKey(Author, related_name='books', on_delete=models.SET_NULL, null=True)
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, db_index=True)
