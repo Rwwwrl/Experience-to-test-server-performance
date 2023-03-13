@@ -1,0 +1,3 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+get_specific_books,5643,449,11,608,143.18,0.000%,184.53237,88.24,44.81,489.7
+TOTAL,5643,449,11,608,143.18,0.000%,184.53237,88.24,44.81,489.7
