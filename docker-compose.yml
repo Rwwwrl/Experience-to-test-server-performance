@@ -11,6 +11,38 @@ services:
       - 8000
     depends_on:
       - postgres_db
+    environment:
+      - GUNICORN_PORT=8000
+
+  app_second_instance:
+    build: ./django_project_instance2
+    container_name: django_project_container_instance2
+    expose:
+      - 8001
+    depends_on:
+      - postgres_db
+    environment:
+      - GUNICORN_PORT=8001
+
+  app_third_instance:
+    build: ./django_project_instance3
+    container_name: django_project_container_instance3
+    expose:
+      - 8002
+    depends_on:
+      - postgres_db
+    environment:
+      - GUNICORN_PORT=8002
+
+  app_fourth_instance:
+    build: ./django_project_instance4
+    container_name: django_project_container_instance4
+    expose:
+      - 8003
+    depends_on:
+      - postgres_db
+    environment:
+      - GUNICORN_PORT=8003
 
   postgres_db:
     image: postgres:14
